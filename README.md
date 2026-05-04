@@ -5,14 +5,14 @@
 ## Список проектов
 | github | repotest.ru | комментарий |
 |-|-|-|
-|[server-http](https://github.com/alec-chicherini/server-http)|-|HTTP сервер для repotest.ru|
-|[site-repotest-ru](https://github.com/alec-chicherini/site-repotest-ru)|[https://repotest.ru/index.html](https://repotest.ru/index.html)|Главная страница repotest.ru|
-|[wordle-client-qt-25-2.repotest.ru](https://github.com/alec-chicherini/wordle-client-qt)|[https://wordle-client-qt-25-2.repotest.ru/wordle-client-qt.html](https://wordle-client-qt-25-2.repotest.ru/wordle-client-qt.html)|Standalone Клиент wordle для linux desktop и wasm версия 25.2|
-|[wordle-client-qt-25-3.repotest.ru](https://github.com/alec-chicherini/wordle-client-qt)|[https://wordle-client-qt-25-3.repotest.ru/wordle-client-qt.html](https://wordle-client-qt-25-3.repotest.ru/wordle-client-qt.html)|Микросервисный Клиент wordle для linux desktop и wasm версия 25.3|
-|[wordle-server-game](https://github.com/alec-chicherini/wordle-server-game)|TODO|Сервер игры|
-|[wordle-server-iam](https://github.com/alec-chicherini/wordle-server-iam)|TODO|IAM сервис для wordle|
-|[wordle-client-bash](https://github.com/alec-chicherini/wordle-client-bash)|TODO|Клиент для wordle в bash|
-|[pet-game-cpp-backend](https://github.com/alec-chicherini/pet-game-cpp-backend)|TODO|Учебный проект backend сервера. Результат курса Яндекс Практикум|
+|[server-http](https://github.com/lex-chicherini/server-http)|-|HTTP сервер для repotest.ru|
+|[site-repotest-ru](https://github.com/lex-chicherini/site-repotest-ru)|[https://repotest.ru/index.html](https://repotest.ru/index.html)|Главная страница repotest.ru|
+|[wordle-client-qt-25-2.repotest.ru](https://github.com/lex-chicherini/wordle-client-qt)|[https://wordle-client-qt-25-2.repotest.ru/wordle-client-qt.html](https://wordle-client-qt-25-2.repotest.ru/wordle-client-qt.html)|Standalone Клиент wordle для linux desktop и wasm версия 25.2|
+|[wordle-client-qt-25-3.repotest.ru](https://github.com/lex-chicherini/wordle-client-qt)|[https://wordle-client-qt-25-3.repotest.ru/wordle-client-qt.html](https://wordle-client-qt-25-3.repotest.ru/wordle-client-qt.html)|Микросервисный Клиент wordle для linux desktop и wasm версия 25.3|
+|[wordle-server-game](https://github.com/lex-chicherini/wordle-server-game)|TODO|Сервер игры|
+|[wordle-server-iam](https://github.com/lex-chicherini/wordle-server-iam)|TODO|IAM сервис для wordle|
+|[wordle-client-bash](https://github.com/lex-chicherini/wordle-client-bash)|TODO|Клиент для wordle в bash|
+|[pet-game-cpp-backend](https://github.com/lex-chicherini/pet-game-cpp-backend)|TODO|Учебный проект backend сервера. Результат курса Яндекс Практикум|
 
 <!--План развития проекта-->
 ## План развития проекта:
@@ -46,14 +46,14 @@
 
 Установить docker 
 ```bash
-source <(curl https://raw.githubusercontent.com/alec-chicherini/development-scripts/refs/heads/main/docker/install_docker.sh)
+source <(curl https://raw.githubusercontent.com/lex-chicherini/development-scripts/refs/heads/main/docker/install_docker.sh)
 ```
 
 <!--Собрать все зависимости -->
 ## Собрать все завсимости
 ### wordle-client-qt-25-02 standalone
 ```bash
-git clone https://github.com/alec-chicherini/wordle-client-qt.git
+git clone https://github.com/lex-chicherini/wordle-client-qt.git
 cd wordle-client-qt
 git checkout 25.02
 git submodule init
@@ -64,7 +64,7 @@ cd ~
 
 ### wordle-client-qt-25-03 microservices
 ```bash
-git clone https://github.com/alec-chicherini/wordle-client-qt.git
+git clone https://github.com/lex-chicherini/wordle-client-qt.git
 cd wordle-client-qt
 git checkout 25.03
 git submodule init
@@ -75,7 +75,7 @@ cd ~
 
 ### site-repotest-ru
 ```bash
-git clone https://github.com/alec-chicherini/site-repotest-ru.git
+git clone https://github.com/lex-chicherini/site-repotest-ru.git
 cd site-repotest-ru
 git submodule init
 git submodule update
@@ -85,7 +85,7 @@ cd ~
 
 ### server-http
 ```bash
-git clone https://github.com/alec-chicherini/server-http.git
+git clone https://github.com/lex-chicherini/server-http.git
 cd server-http
 git submodule init
 git submodule update
@@ -103,7 +103,7 @@ docker secret create repotest_ru_private_key private_key.pem
 
 Скопировать артифакты всех зависимостей в образ для запуска
 ```bash
-git clone https://github.com/alec-chicherini/pet-projects-production.git
+git clone https://github.com/lex-chicherini/pet-projects-production.git
 cd pet-projects-production
 docker build --target=i_am_production . -t i-am-production
 docker service create \
