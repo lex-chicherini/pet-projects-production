@@ -8,7 +8,7 @@ RUN apt update && \
     xz-utils \
     wget
 
-RUN wget -O - https://raw.githubusercontent.com/alec-chicherini/development-scripts/refs/heads/main/cmake/install_cmake.sh 2>/dev/null | bash
+RUN wget -O - https://raw.githubusercontent.com/lex-chicherini/development-scripts/refs/heads/main/cmake/install_cmake.sh 2>/dev/null | bash
 
 FROM server-http-build AS server_http_build
 FROM site-repotest-ru-build AS site_repotest_ru_build
